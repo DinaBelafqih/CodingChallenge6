@@ -56,3 +56,14 @@ return totalCost;
 
 console.log(`Basic 6 Month plan with $10 discount: $${calculateSubscriptionsCost("Basic", 6, 10)}`); // logging basic 6 month plan with $10 discount to console
 console.log(`Premium 12 Month plan with no discount: $${calculateSubscriptionsCost("Premium", 12, 0)}`); // logging premium 12 month plan with no discount to console
+
+// Task 5 Returning Values
+
+let convertCurrency = function(amount, exchangeRate) {
+    let convertedAmount= (amount * exchangeRate).toFixed(2);
+
+    return convertedAmount;
+}; // Created a function to convert currency
+
+console.log(`Converted Currency 1: $${convertCurrency(100, 1.1)}`); // logging converted currency to console
+console.log(`Converted Currency 2: $${convertCurrency(250, 0.85)}`); // logging converted currency to console
