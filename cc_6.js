@@ -67,3 +67,14 @@ let convertCurrency = function(amount, exchangeRate) {
 
 console.log(`Converted Currency 1: $${convertCurrency(100, 1.1)}`); // logging converted currency to console
 console.log(`Converted Currency 2: $${convertCurrency(250, 0.85)}`); // logging converted currency to console
+
+// Task 6 Higher-Order Functions
+
+let orders = [200, 600, 1200, 450, 800]; // declared an array of orders
+
+let applyBulkDiscount = (orders, discountFunction) => {
+    let discountedOrders = orders.map(discountFunction);
+    console.log("Updated Orders:", discountedOrders)
+}; // Function to apply discount function to the orders
+
+applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount); // apply 10% discount if order is over 500
